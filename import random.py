@@ -1,6 +1,5 @@
 import random 
 x= random.randint(1,100)
-print(x)
 attempt=0
 while True:
  guess=int(input("Please enter the guess=" ))

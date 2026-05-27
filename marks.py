@@ -1,20 +1,30 @@
 marks = []
-while True: 
-   user_marks = input("Enter your Marks or write done=")
-   if user_marks == "done":
-    break
+
+while True:
+    user_marks = input("Enter your marks or type done: ")
+    if user_marks.lower() == "done":
+        break
+    if not user_marks.isdigit():
+        print("Please enter a valid numeric mark or 'done'.")
+        continue
 marks.append(int(user_marks))
 def analyze(marks):
- for m in marks:
-   if 100>m>= 33:
-    print("The Student has Passed")
-   elif 0<m<33:
-    print("The Student has Failed")
-   else:
-    print("Please Input Valid Marks")
-print("Highest marks is=",max(marks))
-print("Lowest Mraks is=",min(marks))
-print("Average Score of Class is=",sum(marks)/len(marks))
+    for m in marks:
+        if 0 <= m < 33:
+            print(f"{m}: The student has failed")
+        elif 33 <= m <= 100:
+            print(f"{m}: The student has passed")
+        else:
+            print(f"{m}: Please input valid marks")
+
+
+if marks:
+    analyze(marks)
+    print("Highest marks is=", max(marks))
+    print("Lowest marks is=", min(marks))
+    print("Average score of class is=", sum(marks) / len(marks))
+else:
+    print("No marks were entered.")
 
 
    
