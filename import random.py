@@ -1,4 +1,4 @@
-import random 
+import random
 x= random.randint(1,100)
 attempt=0
 while True:
