@@ -7,7 +7,7 @@ while True:
     if not user_marks.isdigit():
         print("Please enter a valid numeric mark or 'done'.")
         continue
-marks.append(int(user_marks))
+    marks.append(int(user_marks))
 def analyze(marks):
     for m in marks:
         if 0 <= m < 33:
